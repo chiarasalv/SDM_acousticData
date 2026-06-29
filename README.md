@@ -19,8 +19,7 @@ This repository contains the R scripts and derived datasets used to model the ac
 
 
 ## Data availability
-
-Raw acoustic recordings and LiDAR point clouds are subject to institutional restrictions and cannot be publicly redistributed.
+Processed datasets are available on Zenodo: DOI: XXXXX
 
 Derived modelling datasets required to reproduce the analyses are provided where permitted.
 
