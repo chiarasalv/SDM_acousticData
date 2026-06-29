@@ -19,7 +19,7 @@ This repository contains the R scripts and derived datasets used to model the ac
 
 
 ## Data availability
-Processed datasets are available on Zenodo: DOI: XXXXX
+Processed datasets are available on Zenodo: DOI: https://doi.org/10.5281/zenodo.21038768
 
 Derived modelling datasets required to reproduce the analyses are provided where permitted.
 
