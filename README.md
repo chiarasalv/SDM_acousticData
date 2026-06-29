@@ -6,7 +6,7 @@ Code and derived data associated with the manuscript:
 Remote Sensing and Bioacoustic Integration for Assessing Picus viridis Distribution in Structurally Heterogeneous Riparian Forests
 
 ## Authors
-Chiara Salvatori et al.
+Chiara Salvatori, Francesco Ceresa, Michele Torresani, Irene Menegaldo, Vincenzo Saponaro, Luca da Ros, Enrico Tomelleri 
 
 ## Overview
 
