@@ -50,10 +50,9 @@ SDM_acousticData/
 ├── functions/
 │      Custom functions (if applicable)
 │
-├── data/
-│      prepared_resampled90_data/
+├── zenodo_data
 │
-├── outputs/
+├── output/
 │      Generated figures, tables and rasters
 │
 └── README.md
@@ -97,12 +96,17 @@ Download the Zenodo archive.
 Extract the archive into
 
 ```
-data/prepared_resampled90_data/
+zenodo_data
 ```
 
 without changing the folder structure.
 
 ---
+Create the output folder:
+
+```bash
+mkdir output
+```
 
 # Requirements
 
