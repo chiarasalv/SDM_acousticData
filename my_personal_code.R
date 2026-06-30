@@ -60,12 +60,14 @@ if (length(missing_files) > 0) {
 }
 
 # Load inputs
-model_data_raw <- read.csv2(
-  file.path(prepared_dir, "PicusViridis_daily_model_data.csv")
+model_data_raw <- read.csv(
+  file.path(prepared_dir, "PicusViridis_daily_model_data.csv"),
+  stringsAsFactors = FALSE
 )
 
-logger_points_raw <- read.csv2(
-  file.path(prepared_dir, "logger_coordinates.csv")
+logger_points_raw <- read.csv(
+  file.path(prepared_dir, "logger_coordinates.csv"),
+  stringsAsFactors = FALSE
 )
 
 area_rasters <- list(
@@ -542,7 +544,7 @@ table_acoustic_summary <- logger_summary %>%
   ) %>%
   arrange(biotope, id_area)
 
-write.csv2(
+write.csv(
   table_acoustic_summary,
   file.path(out_dir, "Table_1_acoustic_sampling_summary.csv"),
   row.names = FALSE
@@ -581,7 +583,7 @@ period_auc_table <- map_dfr(names(period_results), function(period_name) {
   )
 })
 
-write.csv2(
+write.csv(
   period_auc_table,
   file.path(out_dir, "Table_2_period_level_AUC_summary_diagnostic.csv"),
   row.names = FALSE
@@ -603,13 +605,13 @@ area_transfer_plsr <- run_leave_one_area_plsr(
 
 moran_site <- run_moran_residuals(site_loocv_plsr$predictions)
 
-write.csv2(
+write.csv(
   site_loocv_plsr$predictions,
   file.path(out_dir, "site_level_LOLO_predictions_PLSR_TOT.csv"),
   row.names = FALSE
 )
 
-write.csv2(
+write.csv(
   area_transfer_plsr$predictions,
   file.path(out_dir, "leave_one_area_out_predictions_PLSR_TOT.csv"),
   row.names = FALSE
@@ -632,7 +634,7 @@ diagnostic_summary <- tibble(
     p_value = signif(p_value, 3)
   )
 
-write.csv2(
+write.csv(
   diagnostic_summary,
   file.path(out_dir, "Table_4_validation_diagnostics_TOT.csv"),
   row.names = FALSE
@@ -690,7 +692,7 @@ area_auc_table <- map_dfr(names(area_models), function(area) {
   )
 })
 
-write.csv2(
+write.csv(
   area_auc_table,
   file.path(out_dir, "Table_3_area_specific_AUC_summary_TOT.csv"),
   row.names = FALSE
@@ -708,7 +710,7 @@ component_tuning_table <- map_dfr(names(area_models), function(area) {
     )
 })
 
-write.csv2(
+write.csv(
   component_tuning_table,
   file.path(out_dir, "Table_S3_PLSR_component_tuning.csv"),
   row.names = FALSE
@@ -731,7 +733,7 @@ importance_table <- map_dfr(names(area_models), function(area) {
     )
 })
 
-write.csv2(
+write.csv(
   importance_table,
   file.path(out_dir, "variable_importance_area_specific_TOT_PLSR.csv"),
   row.names = FALSE
@@ -809,7 +811,7 @@ for (area in names(area_models)) {
 
 range_checks_df <- bind_rows(range_diagnostics)
 
-write.csv2(
+write.csv(
   range_checks_df,
   file.path(out_dir, "Table_S2_predictor_range_diagnostics.csv"),
   row.names = FALSE
