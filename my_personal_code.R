@@ -1,3 +1,4 @@
+options(warn = -1)
 # ============================================================
 # Reproducible PLSR workflow — Picus viridis
 # Daily processed dataset + raster predictors
