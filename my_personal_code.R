@@ -1002,5 +1002,24 @@ if (length(missing_outputs) > 0) {
   )
 }
 
-message("Pipeline completed successfully.")
+message("Pipeline completed successfully")
 message("Outputs saved in: ", out_dir)
+cat("
+===========================================================
+
+  ...and the forests will echo with laughter!
+
+                 ,,
+                (o )>>  ** ha ha ha ha **
+               /)__)
+                \"\
+                  v
+        
+
+Green Woodpecker approves this habitat suitability model!
+
+Pipeline completed successfully.
+
+===========================================================
+
+")
