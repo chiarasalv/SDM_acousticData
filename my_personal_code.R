@@ -20,21 +20,23 @@ library(tibble)
 set.seed(123)
 
 # 1. Paths and input files
-# Folder structure expected:
-# project/
-# ├── data/
-# │   └── prepared_resampled90_data/
-# │       ├── PicusViridis_daily_model_data.csv
-# │       ├── logger_coordinates.csv
-# │       ├── ahr_metrics_resampled90_masked.tif
-# │       ├── slud_metrics_resampled90_masked.tif
-# │       └── vals_metrics_resampled90_masked.tif
+# SDM_acousticData/
+# │
+# ├── README.md
+# ├── LICENSE
 # ├── scripts/
-# └── outputs/
+# ├── outputs/
+# ├── zenodo_data/
+# │      PicusViridis_daily_model_data.csv
+# │      logger_coordinates.csv
+# │      ahr_metrics_resampled90_masked.tif
+# │      slud_metrics_resampled90_masked.tif
+# │      vals_metrics_resampled90_masked.tif
+# │      README_DATA.txt
 
 project_dir  <- getwd()
-prepared_dir <- file.path(project_dir, "data", "prepared_resampled90_data")
-out_dir      <- file.path(project_dir, "outputs", "revision_PLS_TOT_resampled90_rao")
+prepared_dir <- file.path(project_dir, "zenodo_data")
+out_dir      <- file.path(project_dir, "output")
 
 dir.create(out_dir, showWarnings = FALSE, recursive = TRUE)
 
