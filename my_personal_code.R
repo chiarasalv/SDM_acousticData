@@ -1011,14 +1011,12 @@ cat("
 
                  ,,
                 (o )>>  ** ha ha ha ha **
-               /)__)
+              /b)__)
                 \"\
                   v
         
 
-Green Woodpecker approves this habitat suitability model!
-
-Pipeline completed successfully.
+The Green Woodpecker approves this habitat suitability model! :)
 
 ===========================================================
 
