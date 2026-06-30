@@ -127,7 +127,7 @@ Main packages
 After downloading the processed datasets, run
 
 ```r
-source("scripts/02_run_PLS_revision_analysis_TOT.R")
+source("scripts/my_personal_code.R")
 ```
 
 The workflow automatically generates all figures, tables and raster outputs reported in the manuscript.
