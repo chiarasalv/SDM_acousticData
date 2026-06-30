@@ -222,7 +222,7 @@ if (nrow(vals_logger) > 1) {
       )
   })
   
-  write.csv2(
+  write.csv(
     vals_redundancy_summary,
     file.path(out_dir, "Table_S1_valsura_logger_redundancy_assessment.csv"),
     row.names = FALSE
@@ -916,22 +916,19 @@ par(mfrow = c(1, 3), mar = c(4, 4, 3, 5))
 plot(
   suitability_outputs$ahr,
   main = "Greti dell'Aurino (ahr)",
-  col = viridis(100),
-  range = c(0, 1)
+  col = viridis(100)
 )
 
 plot(
   suitability_outputs$slud,
   main = "Sluderno Alderwood (slud)",
-  col = viridis(100),
-  range = c(0, 1)
+  col = viridis(100)
 )
 
 plot(
   suitability_outputs$vals,
   main = "Valsura Delta (vals)",
-  col = viridis(100),
-  range = c(0, 1)
+  col = viridis(100)
 )
 
 dev.off()
